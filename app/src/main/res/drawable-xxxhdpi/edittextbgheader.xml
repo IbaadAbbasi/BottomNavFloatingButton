@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Code for drawable -->
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    android:tint="@null"
+
+    >
+    <solid android:color="@color/darkGreytrans"/>
+
+    <corners
+        android:bottomLeftRadius="@dimen/_8sdp"
+        android:bottomRightRadius="@dimen/_8sdp"
+        android:topLeftRadius="@dimen/_8sdp"
+        android:topRightRadius="@dimen/_8sdp"
+        >
+
+    </corners>
+
+
+</shape>

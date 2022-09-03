@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/pic"
+        tools:context=".fragments.NewBookingFragment">
+
+
+        <TextView
+            android:id="@+id/tvCNIC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="start"
+            android:text="CNIC"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etCNIC"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittextbgheader"
+            android:hint="xxxxx-xxxxxxxxx_x"
+            android:inputType="number"
+            android:maxLength="13"
+            android:paddingLeft="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/tvCNIC"
+            app:layout_constraintStart_toStartOf="@+id/tvCNIC"
+            app:layout_constraintTop_toBottomOf="@+id/tvCNIC" />
+
+        <TextView
+            android:id="@+id/tvMobileNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="Mobile No."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etCNIC"
+            app:layout_constraintTop_toBottomOf="@+id/etCNIC" />
+
+        <EditText
+            android:id="@+id/etMobileNumber"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/edittextbgheader"
+            android:hint="xxxx-xxxxxxx"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="@+id/etCNIC"
+            app:layout_constraintStart_toStartOf="@+id/tvMobileNumber"
+            app:layout_constraintTop_toBottomOf="@+id/tvMobileNumber" />
+
+        <TextView
+            android:id="@+id/tvTrains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="Trains"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/etMobileNumber"
+            app:layout_constraintTop_toBottomOf="@+id/etMobileNumber" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SpinnerLayoutEdtTrains"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic"
+            app:boxStrokeColor="@null"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/etMobileNumber"
+            app:layout_constraintStart_toStartOf="@+id/tvTrains"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrains">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/etTrains"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/edittextbgheader"
+                android:clickable="true"
+                android:editable="false"
+                android:fontFamily="@font/jameel_noori"
+                android:hint="Select Train"
+                android:padding="@dimen/_1sdp"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/tvFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:text="From"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTrains"
+            app:layout_constraintTop_toBottomOf="@+id/SpinnerLayoutEdtTrains" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SpinnerLayoutEdtFrom"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic"
+            app:boxStrokeColor="@null"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtTrains"
+            app:layout_constraintStart_toStartOf="@+id/tvFrom"
+            app:layout_constraintTop_toBottomOf="@+id/tvFrom">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/edtFrom"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/edittextbgheader"
+                android:clickable="true"
+                android:editable="false"
+                android:fontFamily="@font/jameel_noori"
+                android:hint="Lahore"
+                android:padding="@dimen/_1sdp"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/edittextbgheader"
+            app:layout_constraintBottom_toBottomOf="@+id/edtAdult"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtClass"
+            app:layout_constraintTop_toTopOf="@+id/edtAdult">
+
+            <ImageView
+                android:id="@+id/imgAdultPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imgAddChild"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/edittextbgheader"
+            app:layout_constraintBottom_toBottomOf="@+id/edtChild"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtClass"
+            app:layout_constraintTop_toTopOf="@+id/edtChild">
+
+            <ImageView
+                android:id="@+id/imgChildPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtTo"
+            android:layout_width="21dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="To"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtFrom"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/SpinnerLayoutEdtFrom"
+            app:layout_constraintTop_toBottomOf="@+id/SpinnerLayoutEdtFrom" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SpinnerLayoutEdtTo"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:hintEnabled="false"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic"
+            app:boxStrokeColor="@null"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtFrom"
+            app:layout_constraintStart_toStartOf="@+id/txtTo"
+            app:layout_constraintTop_toBottomOf="@+id/txtTo">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/edtT0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/edittextbgheader"
+                android:clickable="true"
+                android:editable="false"
+                android:fontFamily="@font/jameel_noori"
+                android:hint="Rawalpindi"
+                android:padding="@dimen/_1sdp"
+
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:hint="Class"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtTo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/SpinnerLayoutEdtTo"
+            app:layout_constraintTop_toBottomOf="@+id/SpinnerLayoutEdtTo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/SpinnerLayoutEdtClass"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            app:hintEnabled="false"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="italic"
+            app:boxStrokeColor="@null"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtTo"
+            app:layout_constraintStart_toStartOf="@+id/txtClass"
+            app:layout_constraintTop_toBottomOf="@+id/txtClass">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/edtClass"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/edittextbgheader"
+                android:clickable="true"
+                android:editable="false"
+                android:fontFamily="@font/jameel_noori"
+                android:hint="Economy"
+                android:padding="@dimen/_1sdp"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/txtNoOfPassenger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center_horizontal"
+            android:text="No. of Passengers"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/SpinnerLayoutEdtClass"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/SpinnerLayoutEdtClass"
+            app:layout_constraintTop_toBottomOf="@+id/SpinnerLayoutEdtClass" />
+
+
+        <EditText
+            android:id="@+id/edtAdult"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="8dp"
+            android:hint="Adult"
+            android:focusable="false"
+
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+
+
+
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/edittextbgheader"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+            app:layout_constraintStart_toEndOf="@+id/imgMinusAdult"
+            app:layout_constraintTop_toBottomOf="@+id/txtNoOfPassenger">
+
+        </EditText>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imgMinusAdult"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/edittextbgheader"
+            app:layout_constraintBottom_toBottomOf="@+id/edtAdult"
+            app:layout_constraintStart_toStartOf="@+id/SpinnerLayoutEdtClass"
+            app:layout_constraintTop_toTopOf="@+id/edtAdult">
+
+            <ImageView
+                android:id="@+id/imgAdultMinus"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/minusline_9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <EditText
+            android:id="@+id/edtChild"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Child"
+
+            android:focusable="false"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:background="@drawable/edittextbgheader"
+            app:layout_constraintEnd_toStartOf="@+id/imgAddChild"
+            app:layout_constraintStart_toEndOf="@+id/imgMinusChild"
+            app:layout_constraintTop_toBottomOf="@+id/edtAdult"
+            tools:ignore="Deprecated">
+        </EditText>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imgMinusChild"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/edittextbgheader"
+            app:layout_constraintBottom_toBottomOf="@+id/edtChild"
+            app:layout_constraintStart_toStartOf="@+id/imgMinusAdult"
+            app:layout_constraintTop_toTopOf="@+id/edtChild">
+
+            <ImageView
+                android:id="@+id/imgChildMinus"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/minusline_9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </ImageView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/txtCalculate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/btnbg"
+            android:gravity="center"
+            android:fontFamily="@font/jameel_noori"
+            android:text="کرایہ کا حساب لگائیں"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintEnd_toEndOf="@+id/imgAddChild"
+            app:layout_constraintStart_toStartOf="@+id/imgMinusChild"
+            app:layout_constraintTop_toBottomOf="@+id/edtChild">
+
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/txttotalAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittextbg"
+            android:gravity="center"
+            android:hint="0000.00 PKR"
+            android:focusable="false"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toEndOf="@+id/txtCalculate"
+            app:layout_constraintStart_toStartOf="@+id/txtCalculate"
+            app:layout_constraintTop_toBottomOf="@+id/txtCalculate">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtNext"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/btnbg"
+            android:fontFamily="@font/jameel_noori"
+            android:gravity="center"
+            android:text="جاری رہے"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txttotalAmount"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/txttotalAmount"
+            app:layout_constraintTop_toBottomOf="@+id/txttotalAmount">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtcancel"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/whitebgwithboxcolor"
+            android:gravity="center"
+            android:fontFamily="@font/jameel_noori"
+            android:text="رد کریں"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtNext"
+            app:layout_constraintEnd_toEndOf="@+id/txttotalAmount"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/txttotalAmount"
+            app:layout_constraintTop_toTopOf="@+id/txtNext">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

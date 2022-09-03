@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dailogBox"
+        android:layout_width="332dp"
+        android:layout_height="175dp"
+        android:background="@drawable/edittextbgheader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/cautionImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/dailogText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/dailogText"
+            app:layout_constraintVertical_bias="0.507"
+            app:srcCompat="@drawable/caution" />
+
+        <TextView
+            android:id="@+id/dailogText"
+            android:layout_width="@dimen/_193sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/jameel_noori"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_9sdp"
+            android:text="آپ کا بیچ آئی ڈی 23565 ہے، آپ دوسرا بیچ نہیں کھول سکتے جب تک کہ آپ آخری بیچ بند نہ کریں۔"
+            android:textColor="@color/txtcolordashboard"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintEnd_toStartOf="@+id/cautionImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/button"
+            style="@drawable/btnbg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/btnbg"
+            android:fontFamily="@font/jameel_noori"
+            android:gravity="center"
+            android:text="بیچ میں جائیں۔"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dailogText"
+            app:layout_constraintTop_toBottomOf="@+id/dailogText" />
+
+        <!--<com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            style="@drawable/btnbg"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/btnbg"
+            android:fontFamily="@font/jameel_noori"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:text="بیچ میں جائیں۔"
+            android:textColor="@color/txtcolordashboard"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/dailogText" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

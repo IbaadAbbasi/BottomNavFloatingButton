@@ -1,0 +1,38 @@
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector xmlns:android="http://schemas.android.com/apk/res/android"
+            android:width="28.719dp"
+            android:height="28.739dp"
+            android:viewportWidth="28.719"
+            android:viewportHeight="28.739">
+            <path
+                android:pathData="M1.552,8.693 L13.8,14.249a1.346,1.346 0,0 0,1.119 0L27.166,8.693a1.175,1.175 0,0 0,0 -2.1L14.919,1.032a1.346,1.346 0,0 0,-1.119 0L1.552,6.588a1.175,1.175 0,0 0,0 2.105ZM27.166,13.334 L24.112,11.95 15.612,15.802a3.031,3.031 0,0 1,-2.509 0l-8.5,-3.852L1.552,13.335a1.173,1.173 0,0 0,0 2.1L13.8,20.989a1.35,1.35 0,0 0,1.119 0l12.248,-5.552a1.173,1.173 0,0 0,0 -2.1ZM27.166,20.053 L24.123,18.674 15.613,22.532a3.031,3.031 0,0 1,-2.509 0L4.6,18.675 1.552,20.054a1.173,1.173 0,0 0,0 2.1L13.8,27.711a1.35,1.35 0,0 0,1.119 0l12.248,-5.552a1.173,1.173 0,0 0,0 -2.1Z"
+                android:name="path_1"
+                android:strokeColor="#006633"
+                android:strokeWidth="1.499983394"/>
+        </vector>
+
+    </aapt:attr>
+    <target android:name="path_1">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:propertyName="trimPathOffset"
+                    android:duration="500"
+                    android:valueFrom="0.3"
+                    android:valueTo="0"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+                <objectAnimator
+                    android:propertyName="trimPathStart"
+                    android:duration="600"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType"
+                    android:interpolator="@android:anim/linear_interpolator"/>
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.railway.ncs.fragments.DashBoardFragment"
+        android:label="fragment_dash_board"
+        tools:layout="@layout/fragment_dash_board" >
+
+        <action
+            android:id="@+id/action_dashBoardFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_newBookingFragment"
+            app:destination="@id/newBookingFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/batchFragment"
+        android:name="com.railway.ncs.fragments.BatchFragment"
+        android:label="BatchFragment" >
+        <action
+            android:id="@+id/action_batchFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_batchFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_batchFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_batchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.railway.ncs.fragments.HistoryFragment"
+        android:label="HistoryFragment" >
+        <action
+            android:id="@+id/action_historyFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newBookingFragment"
+        android:name="com.railway.ncs.fragments.NewBookingFragment"
+        android:label="NewBookingFragment" >
+        <action
+            android:id="@+id/action_newBookingFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_newBookingFragment_to_receiptFragment"
+            app:destination="@id/receiptFragment" />
+        <action
+            android:id="@+id/action_newBookingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+        <action
+            android:id="@+id/action_newBookingFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_newBookingFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_newBookingFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/printReceiptFragment"
+        android:name="com.railway.ncs.fragments.PrintReceiptFragment"
+        android:label="PrintReceiptFragment" >
+        <action
+            android:id="@+id/action_printReceiptFragment_to_reprintFragment"
+            app:destination="@id/reprintFragment" />
+        <action
+            android:id="@+id/action_printReceiptFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_printReceiptFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_printReceiptFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_printReceiptFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_printReceiptFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/receiptFragment"
+        android:name="com.railway.ncs.fragments.ReceiptFragment"
+        android:label="ReceiptFragment" >
+        <action
+            android:id="@+id/action_receiptFragment_to_newBookingFragment"
+            app:destination="@id/newBookingFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_printReceiptFragment"
+            app:destination="@id/printReceiptFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_receiptFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/reprintFragment"
+        android:name="com.railway.ncs.fragments.ReprintFragment"
+        android:label="ReprintFragment" >
+        <action
+            android:id="@+id/action_reprintFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_reprintFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_reprintFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_reprintFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_reprintFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_reprintFragment_to_dashBoardFragment2"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outBoxFragment"
+        android:name="com.railway.ncs.fragments.OutBoxFragment"
+        android:label="fragment_out_box"
+        tools:layout="@layout/fragment_out_box" >
+        <action
+            android:id="@+id/action_outBoxFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_outBoxFragment_to_newBookingFragment"
+            app:destination="@id/newBookingFragment" />
+        <action
+            android:id="@+id/action_outBoxFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_outBoxFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_outBoxFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.railway.ncs.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+
+        <action
+            android:id="@+id/action_profileFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.railway.ncs.fragments.EditProfileFragment"
+        android:label="EditProfileFragment" >
+        <action
+            android:id="@+id/action_editProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_outBoxFragment"
+            app:destination="@id/outBoxFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_batchFragment"
+            app:destination="@id/batchFragment" />
+        <action
+            android:id="@+id/action_editProfileFragment_to_dashBoardFragment"
+            app:destination="@id/dashBoardFragment" />
+    </fragment>
+
+
+</navigation>
